@@ -10,6 +10,7 @@ def self.select_action
   puts "2: View list"
   puts "3: Delete list"
   puts "4: Update list"
+  puts "q: Quit"
   print "Select an option: "
 end
 

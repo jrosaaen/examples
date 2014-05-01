@@ -13,7 +13,10 @@ class Controller
     # display a select action menu to user
     View.select_action
     user_selection = gets.chomp
+
+    until user_selection == "q"
     check_selection(user_selection)
+    end#end action method
   end #end start method
 
   def check_selection(selection)
@@ -25,8 +28,12 @@ class Controller
       action
     when "2"
       View.display_list_msg
-      show_items_on_list = gets.chomp
-      Model.show_list(show_items_on_list)
+      #show_items_on_list = gets.chomp
+      Model.show_list
+      action
+    else
+      puts "I do not recognize that selection"
+      action
       end
   end
 

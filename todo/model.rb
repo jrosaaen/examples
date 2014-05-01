@@ -6,9 +6,8 @@ def self.add_item(item)
   @database << item
 end
 
-def show_list(show_items_on_list)
-  @list = @database.each {|item|puts item}
-  p @list
+def self.show_list
+  @database.each_with_index {|item, idx| puts "#{idx+1}. #{item}"}
 end
 
 
